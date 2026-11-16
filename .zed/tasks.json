@@ -1,0 +1,48 @@
+[
+  {
+    "label": "Run Skiff",
+    "command": "cargo",
+    "args": ["run", "--package", "skiff"],
+    "save": "all",
+    "reveal": "no_focus"
+  },
+  {
+    "label": "Run Skiff (debug logs)",
+    "command": "cargo",
+    "args": ["run", "--package", "skiff"],
+    "env": { "RUST_LOG": "debug" },
+    "save": "all",
+    "reveal": "no_focus"
+  },
+  {
+    "label": "Check workspace",
+    "command": "cargo",
+    "args": ["check", "--workspace"],
+    "save": "all"
+  },
+  {
+    "label": "Test workspace",
+    "command": "cargo",
+    "args": ["test", "--workspace"],
+    "save": "all",
+    "hide": "on_success"
+  },
+  {
+    "label": "Test current package",
+    "command": "cargo",
+    "args": ["test", "-p", "${ZED_CUSTOM_RUST_PACKAGE:skiff}"],
+    "save": "all",
+    "hide": "on_success"
+  },
+  {
+    "label": "Build release",
+    "command": "cargo",
+    "args": ["build", "--release", "--workspace"],
+    "save": "all"
+  },
+  {
+    "label": "Package AppImage",
+    "command": "./scripts/package-appimage.sh",
+    "save": "all"
+  }
+]

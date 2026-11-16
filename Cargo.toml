@@ -1,0 +1,40 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3.0-or-later"
+
+[workspace.dependencies]
+engine = { path = "crates/engine" }
+state = { path = "crates/state" }
+ui = { path = "crates/ui" }
+
+anyhow = "1.0"
+dirs = "6"
+env_logger = "0.11"
+fastrand = "2.5"
+gpui-kit = "0.7.3"
+log = "0.4"
+reqwest = { version = "0.12", default-features = false, features = [
+    "json",
+    "rustls-tls",
+] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = [
+    "rt-multi-thread",
+    "macros",
+    "sync",
+    "time",
+] }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = "debuginfo"
+
+[profile.dev]
+split-debuginfo = "unpacked"

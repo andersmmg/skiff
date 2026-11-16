@@ -1,0 +1,14 @@
+[package]
+name = "state"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+dirs.workspace = true
+engine.workspace = true
+fastrand.workspace = true
+gpui-kit.workspace = true
+log.workspace = true
+serde.workspace = true
+serde_json.workspace = true

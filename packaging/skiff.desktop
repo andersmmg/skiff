@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Skiff
+GenericName=Download Manager
+Comment=Native download manager powered by aria2
+Exec=skiff
+Icon=skiff
+Terminal=false
+Categories=Network;FileTransfer;
+Keywords=download;torrent;aria2;manager;
+StartupWMClass=skiff

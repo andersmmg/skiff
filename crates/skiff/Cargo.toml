@@ -1,0 +1,13 @@
+[package]
+name = "skiff"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+engine.workspace = true
+env_logger.workspace = true
+gpui-kit.workspace = true
+log.workspace = true
+state.workspace = true
+ui.workspace = true
